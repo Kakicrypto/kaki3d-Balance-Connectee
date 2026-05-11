@@ -24,10 +24,12 @@ void setup() {
     tft.fillScreen(TFT_BLACK);
     tft.setTextColor(TFT_WHITE);
     tft.setTextSize(2);
-    tft.setCursor(10, 10);
+    tft.setCursor(70, 60);
     tft.println("Connexion WiFi...");
+    tft.setCursor(50, 80);
     tft.println("SSID: Kaki3D-Balance");
     wm.autoConnect("Kaki3D-Balance");
+    tft.fillScreen(TFT_BLACK); // nettoie l'écran après connexion
     scale.begin(HX711_DT, HX711_SCK);
     scale.tare();
 }
